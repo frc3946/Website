@@ -1,0 +1,110 @@
+@font-face {
+	font-family: RobotFont;
+	src: url("RobotFont.tff");
+}
+
+body {
+	padding-top: 0px;
+}
+
+#head {
+	padding-top: .5em;
+	padding-bottom: 5px;
+}
+
+#name {
+	font-family: RobotFont;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.sponsor {
+	max-height: 215px;
+	padding: 10px 0px;
+}
+.display {
+	padding: 10px 0px;
+}
+
+.thumbnail {
+	max-height: 200px;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+}
+
+div.label { /*alert like label for div*/
+	display: block;
+	white-space: normal;
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+.footer {
+	width: 100%;
+	border-radius: 0px;
+	margin: 1.25em 0px 0px;
+	padding: 1.25em 0px 0px;
+	border-top: 1px solid #E5E5E5;
+}
+
+.green-text {
+	color: #007000;
+}
+
+
+#album_image {
+	/*
+	padding-top: 50px;
+	margin-top: -50px
+	*/
+}
+
+.maxed {
+	min-height: 100%;
+	width: auto;
+}
+
+
+
+
+.responsive-text-high {
+	font-weight: bold;
+}
+
+/**********************************************************************/
+/* X-tra Small devices (phones, 767px and down) */
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+/*
+@media screen and (max-width: 767px) {
+	#name {
+		font-size: 1.5em;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+	#name {
+		font-size: 4.5em;
+	}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px){
+	#name {
+		font-size: 5.5em;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#name {
+		font-size: 7em;
+	}
+}
+*/
+/**********************************************************************/
