@@ -1,5 +1,10 @@
+
+/*
+ * NAME: FitText
+ *	jQuery fitText dymanically to parent
+ */
 jQuery(".responsive-text-low").fitText(0.5);
-jQuery(".responsive-text").fitText();
+jQuery(".responsive-text").fitText(0.9);
 jQuery(".responsive-text-high").fitText(2.0);
 
 /*
@@ -14,7 +19,7 @@ $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
 	// Re-add .open to parent sub-menu item
 
 	$(this).parent().toggleClass('open');
-	$(this).parent().find("ul").parent().find("li.dropdown").toggleClass('open');
+	//$(this).parent().find("ul").parent().find("li.dropdown").toggleClass('open');
 });
 
 

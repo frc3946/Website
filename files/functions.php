@@ -52,7 +52,7 @@
 	//any use beyond 7th level will be cut-off
 	function print_resource_array($array, $level=1)
 	{
-		if($level > 7) { return; }
+		if($level > 7) { return; } //no headings beyond 7
 		foreach($array as $key => $value)
 		{
 
@@ -71,6 +71,7 @@
 		}
 	}
 
+	//Photo Album!
 	function photo_album($directory = './media/photos', $album = false, $title = false, $row_size = 3)
 	{
 		if($album === false && isset($_GET['album'])) //No default album, but album specified
@@ -145,7 +146,7 @@
 					if($i == 0) { echo '<div class="row">'; } //start new row
 
 					echo '<div class="text-center col-md-'.floor(12/$row_size).'">';
-					echo '<a href="./index.php?'.get_GET(array('image')).'&image='.$key.'">';
+					echo '<a href="./index.php?'.get_GET(array('image')).'&image='.$key.'#album_image">';
 					echo '<img class="display" src="'.$directory.'/'.$albums.'/'.$data.'" />';
 					echo '</a>';
 					echo '</div>'."\n";
@@ -181,6 +182,7 @@
 			
 		}
 	}
+
 
 	function get_album_s($directory, $album=false)
 	{
@@ -219,6 +221,8 @@
 		return $raw;
 	}
 
+	//Gets listing of directory, removes default unix files (. and ..)
+	//
 	function get_directory_listing($directory = array())
 	{
 		if(file_exists($directory))
@@ -243,6 +247,7 @@
 			return -1;
 		}
 	}
+
 	//Returns all GET variables, while
 	//allowing you to remove particular
 	//ones as an array of the GET keys 

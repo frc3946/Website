@@ -2,6 +2,7 @@
 include_once("./files/functions.php");
 include_once("./navigation.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -18,10 +19,10 @@ include_once("./navigation.php");
 	<body>
 		<div id="head" class="container" role="header">
 			<div class="row">
-				<div class="col-xs-4 col-sm-3 text-center">
+				<div class="col-xs-4 col-sm-2 text-center">
 					<a class="" href="./"><img src="./files/logo.png" /></a>
 				</div>
-				<div class="col-xs-8 col-sm-9">
+				<div class="col-xs-8 col-sm-9 col-lg-7 col-lg-offset-3">
 					<div class="row">
 						<div class="responsive-text-high col-xs-12 text-left">
 							FRC Team 3946
@@ -41,25 +42,23 @@ include_once("./navigation.php");
 			</div>
 		</div>
 
-
 		<div class="navbar navbar-default navbar-static-top" role="navigation">
 			<div class="container">
-				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-					<div class="sr-only">Toggle Navigation</div>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-
-				<div class="collapse navbar-collapse navHeaderCollapse">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav navbar-right">
 <?php display_nav($links); echo "\n"; ?>
 					</ul>
 				</div>
 			</div>
 		</div>
-
-
 
 		<div class="container" role="main">
 		<?php
@@ -113,9 +112,6 @@ include "./pages/".$_GET['p'].".php";
 			</div>
 		</footer>
 
-
-
-
 		<script src="./bootstrap/js/jquery.min.js"></script>
 		<script src="./bootstrap/js/bootstrap.min.js"></script>
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -126,5 +122,6 @@ include "./pages/".$_GET['p'].".php";
 		<![endif]-->
 		<script src="./files/jquery.fittext.js"></script>
 		<script src="./files/javascript.js"></script>
+
 	</body>
 </html>
