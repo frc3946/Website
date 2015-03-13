@@ -5,13 +5,13 @@
 <?php
 $sponsors = array
 (
-	'jcpenney' => 'http://www.jcpenney.com/',
-	'saic' => 'http://www.saic.com/',
+	'ingersollrand' => 'http://company.ingersollrand.com/ircorp/en/index.html',
 	'textron' => 'http://www.textron.com/',
-	'nasa' => 'http://www.nasa.gov/',
+	'ifixit' => 'https://www.ifixit.com/',
 	'ndep' => 'http://www.ndep.us/',
-	'spawar' => 'http://www.spawar.navy.mil/',
-	'freeportmcmoran' => 'http://www.fcx.com/'
+	'pae' => 'http://www.pae.com/',
+	'lewistrailers' => 'http://lewistrailers.com/'
+
 	//'imagename(.jpg)' => 'URL',
 );
 
