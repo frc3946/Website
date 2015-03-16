@@ -5,14 +5,87 @@
 <?php
 $sponsors = array
 (
-	'ingersollrand'	=> 'http://company.ingersollrand.com/ircorp/en/index.html',
-	'textron'		=> 'http://www.textron.com/',
-	'ifixit'		=> 'https://www.ifixit.com/',
-	'ndep'			=> 'http://www.ndep.us/',
-	'pae'			=> 'http://www.pae.com/',
-	'lewistrailers'	=> 'http://lewistrailers.com/'
+	'1' => array
+	(
+		'Ingersoll Rand Foundation' => array
+		(
+			'link' => 'http://company.ingersollrand.com/ircorp/en/index.html',
+			'image' => 'ingersollrand.jpg'
+		)
+	),
+	'2' => array
+	(
+		'Textron' => array
+		(
+			'link' => 'http://www.textron.com/',
+			'image' => 'textron.jpg'
+		),
+		'NDEP' => array
+		(
+			'link' => 'http://www.ndep.us/',
+			'image' => 'ndep.jpg'
+		)
+	),
+	'3' => array
+	(
+		'iFixit' => array
+		(
+			'link' => 'https://www.ifixit.com/',
+			'image' => 'ifixit.jpg'
+		),
+		'PAE' => array
+		(
+			'link' => 'http://www.pae.com/',
+			'image' => 'pae.jpg'
+		),
+		'Lewis Trailer Sales' => array
+		(
+			'link' => 'http://lewistrailers.com/',
+			'image' => 'lewistrailers.jpg'
+		),
+	),
+	'6' => array
+	(
+		'Dr. Donna Dudziak' => array
+		(
+			'layer' => '6',
+			'link' => 'http://uplandsurgeons.com/surgeons/donna_dudziak_md',
+			'image' => false
+		),
+		'Bayou Steel' => array
+		(
+			'layer' => '6',
+			'link' => 'http://www.bayoumetalsupply.com/',
+			'image' => false
+		),
+		'CGB' => array
+		(
+			'layer' => '6',
+			'link' => 'http://www.cgb.com/',
+			'image' => false
+		),
+		'Hank\'s Stump Grinding' => array
+		(
+			'layer' => '6',
+			'link' => 'http://www.stumpgrindinglouisiana.com/',
+			'image' => false
+		),
+		'NOLA Lending Group' => array
+		(
+			'layer' => '6',
+			'link' => 'https://nolalending.com/',
+			'image' => false
+		)
+	)
 
-	//'imagename(.jpg)' => 'URL',
+	/*
+	'Sponsor Name' => array
+	(
+		'layer' => #ofImages/LinksPerLine,
+		'link' => 'url',
+		'image' => 'image file.jpg'/false for no image
+	),
+	*/
 );
 
 display_sponsors($sponsors, $media_sponsors);

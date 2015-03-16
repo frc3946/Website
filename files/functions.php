@@ -31,21 +31,31 @@
 
 	//Display Sponsors array in Pic_Title => URL format
 	//Row_size controls how many images are in a row
-	function display_sponsors($sponsor_array, $image_directory, $row_size=3)
+	function display_sponsors($sponsor_array, $image_directory)
 	{
-		$i = 0; //for Row Management (default three to a row)
-		foreach($sponsor_array as $picture => $url)
+		$i = 0; //for Row Management
+		$row_size = 0;
+		foreach($sponsor_array as $layer => $sponsors)
 		{
-			if($i == $row_size) { echo '</div>'; $i = 0; } //reset counter
-			if($i == 0) { echo '<div class="row">'; } //start new row
-
-				echo '<div class="text-center col-md-4 col-sm-6">';
-					echo '<a href="'.$url.'"><img class="sponsor" src="'.$image_directory.'/'.$picture.'.jpg" /></a>';
+			$row_size = $layer;
+			foreach($sponsors as $name => $data)
+			{
+				if($i == $row_size) {echo '</div>'; $i = 0;} //end row
+				if($i == 0) { echo '<div class="row">'; } //start new row
+				echo '<div class="text-center col-sm-'.(12/$row_size).'">';
+					echo '<a href="'.$data['link'].'">';
+						if($data['image'])
+							echo '<img class="sponsor" alt="'.$name.'" src="'.$image_directory.'/'.$data['image'].'" />';
+						else
+							echo $name;
+					echo '</a>';
 				echo '</div>';
 
-			$i++; //incrament counter
+				$i++; //incrament counter
+			}
+			$i=0;
+			echo '</div>';
 		}
-		echo '</div>';
 	}
 
 	//Recursive (7-Level) Title => Link, resource list formatter
