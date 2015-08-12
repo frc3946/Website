@@ -2,7 +2,7 @@
 	//Global Variables
 	$media_albums = './media/photos';
 	$media_sponsors = './media/sponsors';
-	
+
 	//Recursive (Potentially N-Level) NavBar output
 	//Currently 3 level due to JavaScript limitation...
 	function display_nav($array, $rec=false)
@@ -82,7 +82,7 @@
 	}
 
 	//Photo Album!
-	function photo_album($directory = './media/photos', $album = false, $title = false, $row_size = 3)
+	function photo_album($directory = './media/photos', $album = false, $title = false, $row_size = 3, $page_size = 15)
 	{
 		if($album === false && isset($_GET['album'])) //No default album, but album specified
 		{
@@ -147,7 +147,8 @@
 				return $pictures;
 			}
 
-			if(!isset($_GET['image'])) //output all images
+			if(!isset($_GET['image'])) //output list of images (plus pagination)
+			//TODO: Actually limit pages to @$page_size
 			{
 				$i = 0;
 				foreach($pictures as $key => $data) //output each image
@@ -189,7 +190,7 @@
 					echo '<img class="album_photo display" src="'.$directory.'/'.$albums.'/'.$pictures[$_GET['image']].'" />';
 				echo '</div>';
 			}
-			
+
 		}
 	}
 
@@ -260,7 +261,7 @@
 
 	//Returns all GET variables, while
 	//allowing you to remove particular
-	//ones as an array of the GET keys 
+	//ones as an array of the GET keys
 	function get_GET($remove = array()) {
 		foreach($remove as $key => $value)
 		{

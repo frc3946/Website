@@ -44,46 +44,78 @@ $sponsors = array
 			'image' => 'lewistrailers.jpg'
 		),
 	),
-	'6' => array
+	'4' => array
 	(
 		'Dr. Donna Dudziak' => array
+    (
+      'link' => 'http://uplandsurgeons.com/surgeons/donna_dudziak_md',
+      'image' => false
+    ),
+		'Poole Lumber Company' => array
 		(
-			'layer' => '6',
-			'link' => 'http://uplandsurgeons.com/surgeons/donna_dudziak_md',
+			'link' => 'http://poolelumber.com/',
 			'image' => false
-		),
+		)
+	),
+	'6' => array
+	(
+		'Paradigm Health System' => array
+    (
+      'link' => 'http://www.paradigmhealth.net/wordpress/',
+      'image' => false
+    ),
 		'Bayou Steel' => array
 		(
-			'layer' => '6',
 			'link' => 'http://www.bayoumetalsupply.com/',
 			'image' => false
 		),
 		'CGB' => array
 		(
-			'layer' => '6',
 			'link' => 'http://www.cgb.com/',
 			'image' => false
 		),
 		'Hank\'s Stump Grinding' => array
 		(
-			'layer' => '6',
 			'link' => 'http://www.stumpgrindinglouisiana.com/',
 			'image' => false
 		),
 		'NOLA Lending Group' => array
 		(
-			'layer' => '6',
 			'link' => 'https://nolalending.com/',
 			'image' => false
-		)
+		),
+		'Children\'s International' => array
+  	(
+    	'link' => 'http://childrensinternationalmedicalgroup.com/',
+    	'image' => false
+  	),
+    'Northshore Natural Foods' => array
+    (
+      'link' => 'https://www.facebook.com/northshorenaturalfoods',
+      'image' => false
+    ),
+    'Who Dat Shoppe' => array
+    (
+      'link' => 'http://www.thewhodatshoppe.com/',
+      'image' => false
+    ),
+    'Vera\'s Seafood' => array
+    (
+      'link' => '#',
+      'image' => false
+    ),
+    'JG Marine' => array
+    (
+      'link' => '#',
+      'image' => false
+    )
 	)
 
 	/*
 	'Sponsor Name' => array
 	(
-		'layer' => #ofImages/LinksPerLine,
 		'link' => 'url',
-		'image' => 'image file.jpg'/false for no image
+		'image' => 'image file.jpg'/false for no image'
 	),
 	*/
 );
