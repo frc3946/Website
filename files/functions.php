@@ -108,8 +108,16 @@
 		if($album === false) //List all Albums, Photos page more or less
 		{
 			echo '<h1 class="text-center">Photo Albums</h1>';
+
+			//set current page number
+			$page = (isset($_GET['page']) && $_GET['page'] > 0)? $_GET['page']-1 : 0;
+			//Output Pagination
+			echo '<div class="text-right">';
+			gen_pagination(ceil(count($albums)/$page_size),$page+1);
+			echo '</div>';
+
 			$i = 0;
-			foreach($albums as $key => $data) //output each album
+			foreach(array_slice($albums, $page*$page_size, $page_size, true) as $key => $data) //output each album
 			{
 				$pictures = get_pictures($directory.'/'.$data);
 				if($pictures !== -1) // Don't bother listing empty albums
@@ -133,6 +141,12 @@
 			}
 			echo '</div>';
 
+			//set current page number
+			$page = (isset($_GET['page']) && $_GET['page'] > 0)? $_GET['page']-1 : 0;
+			//Output Pagination
+			echo '<div class="text-right">';
+			gen_pagination(ceil(count($albums)/$page_size),$page+1);
+			echo '</div>';
 		}
 		else //specific Album
 		{
@@ -148,10 +162,16 @@
 			}
 
 			if(!isset($_GET['image'])) //output list of images (plus pagination)
-			//TODO: Actually limit pages to @$page_size
 			{
+				//set current page number
+				$page = (isset($_GET['page']) && $_GET['page'] > 0)? $_GET['page']-1 : 0;
+				//Output Pagination
+				echo '<div class="text-right">';
+				gen_pagination(ceil(count($pictures)/$page_size),$page+1);
+				echo '</div>';
+
 				$i = 0;
-				foreach($pictures as $key => $data) //output each image
+				foreach(array_slice($pictures, $page*$page_size, $page_size, true) as $key => $data) //output each image for space
 				{
 					if($i == $row_size) { echo '</div>'; $i = 0; } //reset counter
 					if($i == 0) { echo '<div class="row">'; } //start new row
@@ -164,6 +184,11 @@
 
 					$i++;
 				}
+				echo '</div>';
+
+				//Output Pagination
+				echo '<div class="text-right">';
+				gen_pagination(ceil(count($pictures)/$page_size),$page+1);
 				echo '</div>';
 			}
 			else //output single image
@@ -262,7 +287,8 @@
 	//Returns all GET variables, while
 	//allowing you to remove particular
 	//ones as an array of the GET keys
-	function get_GET($remove = array()) {
+	function get_GET($remove = array())
+	{
 		foreach($remove as $key => $value)
 		{
 			$to_remove[$value] = $value; //transfer $removes values into the keys to compare to GET variables properly
@@ -276,5 +302,55 @@
 			//$string = $string.$key.'/'.$value.'/';
 		}
 		return substr($string, 0, -1); //cut off last '&' or '/'
+	}
+
+	function gen_pagination($num_pages, $curr_page, $num_shown = 10)
+	{
+		echo '<nav>';
+			echo '<ul class="pagination">';
+				echo '<li class="'.(($curr_page <= 1)? 'disabled' : '').'">';
+					echo '<a href="'.(($curr_page <= 1)? '#' : ('./index.php?'.get_GET(array('page')).'&page='.($curr_page-1))).'" aria-label="Previous">';
+						echo '<span aria-hidden="true">&laquo;</span>';
+					echo '</a>';
+				echo '</li>';
+
+				$start = $curr_page - ceil($num_shown*0.7);
+				$end = $curr_page + ceil($num_shown*0.2);
+				if($start < 1)
+				{
+					$end += $start*(-1)+1;
+					$start = 1;
+				}
+				if($end > $num_pages)
+				{
+					$start -= $end - $num_pages;
+					$end = $num_pages;
+				}
+
+				//Handle if $num_pages is less than $num_shown
+				if($start < 1)
+				{
+					$start = 1;
+				}
+				if($end > $num_pages)
+				{
+					$end = $num_pages;
+				}
+
+				for($i = $start; $i <= $end; $i++)
+				{
+					echo '<li class="'.(($i == $curr_page)? 'active': '').'">';
+					echo '<a href="./index.php?'.get_GET(array('page')).'&page='.($i).'">';
+						echo str_pad($i, 2, '0', STR_PAD_LEFT);
+					echo '</a>';
+					echo '</li>';
+				}
+				echo '<li class="'.(($curr_page >= $num_pages)? 'disabled' : '').'">';
+					echo '<a href="'.(($curr_page >= $num_pages)? '#' : ('./index.php?'.get_GET(array('page')).'&page='.($curr_page+1))).'" aria-label="Next">';
+						echo '<span aria-hidden="true">&raquo;</span>';
+					echo '</a>';
+				echo '</li>';
+			echo '</ul>';
+		echo '</nav>';
 	}
 ?>
