@@ -125,7 +125,7 @@
 					if($i == 0) { echo '<div class="row">'; } //start new row
 
 					echo '<div class="text-center col-md-'.floor(12/$row_size).' display">';
-					echo '<a href="./index.php?'.get_GET(array('album','image')).'&album='.$key.'">';
+					echo '<a href="./index.php?'.get_GET(array('album','image','page')).'&album='.$key.'">';
 					if(file_exists($directory.'/'.$data.'/thumbnail.jpg'))
 					{
 						echo '<div style="margin: 0px; padding: 0px;">';
@@ -176,7 +176,7 @@
 					if($i == 0) { echo '<div class="row">'; } //start new row
 
 					echo '<div class="text-center col-md-'.floor(12/$row_size).'">';
-					echo '<a href="./index.php?'.get_GET(array('image')).'&image='.$key.'#album_image">';
+					echo '<a href="./index.php?'.get_GET(array('image','page')).'&image='.$key.'#album_image">';
 					echo '<img class="display" src="'.$directory.'/'.$albums.'/'.$data.'" />';
 					echo '</a>';
 					echo '</div>'."\n";
