@@ -34,15 +34,14 @@
 	function display_sponsors($sponsor_array, $image_directory)
 	{
 		$i = 0; //for Row Management
-		$row_size = 0;
-		foreach($sponsor_array as $layer => $sponsors)
+		foreach($sponsor_array as $level => $sponsors)
 		{
-			$row_size = $layer;
+			echo '<div class="h1 text-center">'.$level.'</div>';
 			foreach($sponsors as $name => $data)
 			{
-				if($i == $row_size) {echo '</div>'; $i = 0;} //end row
-				if($i == 0) { echo '<div class="row">'; } //start new row
-				echo '<div class="text-center col-sm-'.(12/$row_size).'">';
+				if($i == 12 || $i+$data['size'] > 12) {echo '</div>'; $i = 0;} //end row
+				if($i == 0) { echo '<div class="row sponsor-row">'; } //start new row
+				echo '<div class="text-center col-sm-'.$data['size'].'">';
 					echo '<a href="'.$data['link'].'">';
 						if($data['image'])
 							echo '<img class="sponsor" alt="'.$name.'" src="'.$image_directory.'/'.$data['image'].'" />';
@@ -51,7 +50,7 @@
 					echo '</a>';
 				echo '</div>';
 
-				$i++; //incrament counter
+				$i+=$data['size']; //incrament counter
 			}
 			$i=0;
 			echo '</div>';

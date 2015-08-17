@@ -10,7 +10,8 @@
 			(
 				'T1G3R' => 'tiger',
 				'(T1G3R)<sup>2</sup>' => 'tiger2',
-				'(T1G3R)<sup>3</sup>' => 'tiger3'
+				'(T1G3R)<sup>3</sup>' => 'tiger3',
+				'(T1G3R)<sup>4</sup>' => 'tiger4'
 			),
 			'Crews' => 'crews'
 		),
