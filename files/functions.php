@@ -308,7 +308,7 @@
 		echo '<nav>';
 			echo '<ul class="pagination">';
 				echo '<li class="'.(($curr_page <= 1)? 'disabled' : '').'">';
-					echo '<a href="'.(($curr_page <= 1)? '#' : ('./index.php?'.get_GET(array('page')).'&page='.($curr_page-1))).'" aria-label="Previous">';
+					echo '<a class="btn-previous" href="'.(($curr_page <= 1)? '#' : ('./index.php?'.get_GET(array('page')).'&page='.($curr_page-1))).'" aria-label="Previous">';
 						echo '<span aria-hidden="true">&laquo;</span>';
 					echo '</a>';
 				echo '</li>';
@@ -345,7 +345,7 @@
 					echo '</li>';
 				}
 				echo '<li class="'.(($curr_page >= $num_pages)? 'disabled' : '').'">';
-					echo '<a href="'.(($curr_page >= $num_pages)? '#' : ('./index.php?'.get_GET(array('page')).'&page='.($curr_page+1))).'" aria-label="Next">';
+					echo '<a class="btn-previous" href="'.(($curr_page >= $num_pages)? '#' : ('./index.php?'.get_GET(array('page')).'&page='.($curr_page+1))).'" aria-label="Next">';
 						echo '<span aria-hidden="true">&raquo;</span>';
 					echo '</a>';
 				echo '</li>';
