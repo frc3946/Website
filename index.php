@@ -14,7 +14,7 @@ include_once("./navigation.php");
 		<link rel="stylesheet" href="./files/styles.css" />
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
 	</head>
 	<body>
 		<div id="head" class="container" role="header">
