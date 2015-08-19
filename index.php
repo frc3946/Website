@@ -113,6 +113,7 @@ include "./pages/".$_GET['p'].".php";
 		</footer>
 
 		<script src="./bootstrap/js/jquery.min.js"></script>
+		<script src="./bootstrap/js/jquery.mobile.min.js"></script>
 		<script src="./bootstrap/js/bootstrap.min.js"></script>
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
