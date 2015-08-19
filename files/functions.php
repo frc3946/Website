@@ -213,7 +213,7 @@
 				echo '<div class="text-center">'; //image
 					echo '<img class="album_photo display" src="'.$directory.'/'.$albums.'/'.$pictures[$_GET['image']].'" />';
 				echo '</div>';
-				echo '<script type="text/javascript" src="./files/photo_album.js"></script>';
+				echo '<script src="./files/photo_album.js"></script>';
 			}
 
 		}
