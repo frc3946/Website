@@ -313,8 +313,8 @@
 					echo '</a>';
 				echo '</li>';
 
-				$start = $curr_page - ceil($num_shown*0.7);
-				$end = $curr_page + ceil($num_shown*0.2);
+				$start = $curr_page - ceil($num_shown*0.7); //TODO: should probably find better numbers
+				$end = $curr_page + ceil($num_shown*0.2); //that won't only work well for 10
 				if($start < 1)
 				{
 					$end += $start*(-1)+1;
