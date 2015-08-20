@@ -7,7 +7,7 @@ include_once("./navigation.php");
 <html lang="en">
 	<head>
 		<title>Tiger Robotics | FIRST FRC3946</title>
-		
+
 		<link rel="shortcut icon" type="image/x-icon" href="./files/favicon.gif" />
 		<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="./bootstrap/css/magic-bootstrap-min.css" />
@@ -113,6 +113,7 @@ include "./pages/".$_GET['p'].".php";
 		</footer>
 
 		<script src="./bootstrap/js/jquery.min.js"></script>
+		<script src="./bootstrap/js/jquery.mobile.min.js"></script>
 		<script src="./bootstrap/js/bootstrap.min.js"></script>
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -122,6 +123,7 @@ include "./pages/".$_GET['p'].".php";
 		<![endif]-->
 		<script src="./files/jquery.fittext.js"></script>
 		<script src="./files/javascript.js"></script>
+		<script src="./files/photo_album.js"></script>
 
 	</body>
 </html>
