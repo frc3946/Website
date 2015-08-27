@@ -18,7 +18,7 @@
 		'FIRST' => array
 		(
 			'About First' => 'http://www.usfirst.org/aboutus/vision',
-			'Current Game' => 'http://www.usfirst.org/roboticsprograms/frc/2014-game'
+			'Current Game' => 'http://www.usfirst.org/roboticsprograms/frc/2015-game'
 		),
 		'Calendar' => 'calendar',
 		'Media' => array
@@ -28,7 +28,7 @@
 				'Safety Contract' => './media/resources/team_documents/Safety_Contract.pdf',
 				//'General' => 'generalresources',
 				//'FIRST' =>'firstresources',
-				'Programming(Java)'=> 'javaresources'
+				'Programming(Java)'=> 'javaresources',
 				//'Programming(LabVIEW)' => 'labviewresources',
 				//'Web Design' => 'webdesignresources',
 				//'Electrical' => 'electricalresources',

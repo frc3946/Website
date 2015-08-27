@@ -177,7 +177,7 @@
 
 					echo '<div class="text-center col-md-'.floor(12/$row_size).'">';
 					echo '<a href="./index.php?'.get_GET(array('image','page')).'&image='.$key.'#album_image">';
-					echo '<img class="display" src="'.$directory.'/'.$albums.'/'.$data.'" />';
+					echo '<img class="display" src="'.$directory.'/'.$albums.((file_exists($directory.'/'.$albums.'/thumbs/'.$data)? '/thumbs/':'/')).$data.'" />';
 					echo '</a>';
 					echo '</div>'."\n";
 
