@@ -252,17 +252,18 @@
 	function get_pictures($directory)
 	{
 
-		$raw = get_directory_listing($directory);
+		$raw = get_directory_listing($directory,array('thumbnail.jpg','thumbs'));
 		return $raw;
 	}
 
 	//Gets listing of directory, removes default unix files (. and ..)
 	//
-	function get_directory_listing($directory = array())
+	function get_directory_listing($directory = array(),$remove = array())
 	{
 		if(file_exists($directory))
 		{
-			$raw_listing = array_diff(scandir($directory),array('..', '.', 'thumbnail.jpg')); //remove unix files and thumbnail
+			array_push(remove, '..', '.');
+			$raw_listing = array_diff(scandir($directory),$remove); //scan directory and remove selected files //array('..', '.', 'thumbnail.jpg')
 			if(empty($raw_listing)) //No files in directory
 			{
 				return -1;
