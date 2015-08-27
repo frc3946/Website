@@ -262,7 +262,7 @@
 	{
 		if(file_exists($directory))
 		{
-			array_push(remove, '..', '.');
+			array_push($remove, '..', '.');
 			$raw_listing = array_diff(scandir($directory),$remove); //scan directory and remove selected files //array('..', '.', 'thumbnail.jpg')
 			if(empty($raw_listing)) //No files in directory
 			{
