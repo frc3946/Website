@@ -86,7 +86,7 @@ include "./pages/".$_GET['p'].".php";
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-3 col-xs-6">
-							<a href="http://www.usfirst.org"><img src="./files/firstLogo.png" /></a>
+							<a href="http://www.firstinspires.org/"><img src="./files/firstLogo.png" /></a>
 						</div>
 						<div class="col-sm-9 col-xs-6">
 							<div class="row">

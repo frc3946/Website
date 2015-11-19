@@ -17,8 +17,8 @@
 		),
 		'FIRST' => array
 		(
-			'About First' => 'http://www.usfirst.org/aboutus/vision',
-			'Current Game' => 'http://www.usfirst.org/roboticsprograms/frc/2015-game'
+			'About First' => 'http://www.firstinspires.org/about/vision-and-mission',
+			'Current Game' => 'http://www.firstinspires.org/robotics/frc/game-and-season'
 		),
 		'Calendar' => 'calendar',
 		'Media' => array
