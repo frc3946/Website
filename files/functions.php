@@ -262,8 +262,8 @@
 	{
 		if(file_exists($directory))
 		{
-			array_push($remove, '..', '.');
-			$raw_listing = array_diff(scandir($directory),$remove); //scan directory and remove selected files //array('..', '.', 'thumbnail.jpg')
+			array_push($remove, '..', '.'); //Always remove linux directory listing
+			$raw_listing = array_diff(scandir($directory),$remove); //scan directory and remove selected files
 			if(empty($raw_listing)) //No files in directory
 			{
 				return -1;
@@ -329,13 +329,9 @@
 
 				//Handle if $num_pages is less than $num_shown
 				if($start < 1)
-				{
 					$start = 1;
-				}
 				if($end > $num_pages)
-				{
 					$end = $num_pages;
-				}
 
 				for($i = $start; $i <= $end; $i++)
 				{
